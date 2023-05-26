@@ -1,0 +1,30 @@
+.Navbar {
+    width: 100%;
+    height: var(--navbar-height);
+    background-color: var(--inverted-bg-color);
+    display: flex;
+    align-items: center;
+}
+
+.Link {
+    color: white;
+    font: var(--font-size-m);
+    margin-right: 20px;
+    text-transform: uppercase;
+
+    &:last-child {
+        margin-right: 0;
+    }
+}
+
+.Inner {
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.Links {
+    display: flex;
+    align-items: center;
+}

@@ -1,0 +1,10 @@
+.Sidebar {
+    height: calc(100vh - var(--navbar-height));
+    width: var(--sidebar-width);
+    background-color: azure;
+    transition: 0.3s ease-in-out;
+}
+
+.Colapsed {
+    width: var(--sidebar-width-collapsed);
+}
