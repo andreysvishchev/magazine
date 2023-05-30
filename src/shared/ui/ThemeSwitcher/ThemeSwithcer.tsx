@@ -4,17 +4,17 @@ import Button from '../Button/Button'
 import cls from './ThemeSwitcher.module.scss'
 
 interface ThemeSwithcerProps {
-	className?: string
+    className?: string
 }
 
 const ThemeSwithcer = ({ className }: ThemeSwithcerProps) => {
-	const { theme, changeTheme } = useTheme()
+    const { theme, changeTheme } = useTheme()
 
-	return (
-		<div className={classNames(cls.ThemeSwithcer, {}, [className])}>
-			<Button onClick={changeTheme}>{theme === 'primary' ? 'Светлая' : 'Темная'}</Button>
-		</div>
-	)
+    return (
+        <div className={classNames(cls.ThemeSwithcer, {}, [className])}>
+            <Button onClick={changeTheme}>{theme === 'primary' ? 'Светлая' : 'Темная'}</Button>
+        </div>
+    )
 }
 
 export default ThemeSwithcer

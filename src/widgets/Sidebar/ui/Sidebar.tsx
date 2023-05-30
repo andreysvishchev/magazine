@@ -8,14 +8,14 @@ interface SidebarProps {
 }
 
 const Sidebar = ({ className }: SidebarProps) => {
-    const [colapsed, setColapsed] = useState(true)
+    const [collapsed, setCollapsed] = useState(true)
     const { t } = useTranslation()
     return (
-        <div className={classNames(cls.Sidebar, { [cls.Colapsed]: colapsed }, [className])}>
+        <div className={classNames(cls.Sidebar, { [cls.Collapsed]: collapsed }, [className])}>
             <button
                 className={cls.Button}
                 onClick={() => {
-                    setColapsed(!colapsed)
+                    setCollapsed(!collapsed)
                 }}>
                 {t('Перевод')}
             </button>

@@ -3,21 +3,23 @@ import { classNames } from 'shared/lib/classNames/classNames'
 import cls from './LanguageSwitcher.module.scss'
 
 interface LanguageProps {
-	className?: string
+    className?: string
 }
 
 const LanguageSwitcher = ({ className }: LanguageProps) => {
-	const { t, i18n } = useTranslation()
+    const { t, i18n } = useTranslation()
 
-	const changeLanguage = () => {
-		i18n.changeLanguage(i18n.language === 'ru' ? 'en' : 'ru')
-	}
+    const changeLanguage = () => {
+        i18n.changeLanguage(i18n.language === 'ru' ? 'en' : 'ru')
+    }
 
-	return (
-		<button onClick={changeLanguage} className={classNames(cls.LanguageSwitcher, {}, [className])}>
-			{t('Перевод')}
-		</button>
-	)
+    return (
+        <button
+            onClick={changeLanguage}
+            className={classNames(cls.LanguageSwitcher, {}, [className])}>
+            {t('Перевод')}
+        </button>
+    )
 }
 
 export default LanguageSwitcher

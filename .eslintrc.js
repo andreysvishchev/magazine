@@ -4,42 +4,37 @@ module.exports = {
         es2021: true,
         jest: true
     },
-    extends: ['plugin:react/recommended', 'plugin:i18next/recommended', 'airbnb', 'prettier'],
-    overrides: [],
+    extends: ['plugin:react/recommended', 'airbnb', 'plugin:i18next/recommended', 'prettier'],
     parser: '@typescript-eslint/parser',
     parserOptions: {
-        ecmaVersion: 'latest',
         ecmaFeatures: {
             jsx: true
         },
+        ecmaVersion: 'latest',
         sourceType: 'module'
-        // project: 'tsconfig.json',
-        // tsconfigRootDir: __dirname
     },
-    plugins: ['react', 'prettier', 'i18next', '@typescript-eslint'],
+    plugins: ['react', '@typescript-eslint', 'i18next', 'prettier'],
     rules: {
-        'import/no-unresolved': 'off',
-        'import/prefer-default-export': 'off',
-        'import/extensions': 'off',
-        'import/no-extraneous-dependencies': 'off',
-
-        'react/jsx-filename-extension': [2, { extensions: ['.js', '.jsx', '.tsx'] }],
-        'react/require-default-props': 'off',
-        'react/jsx-curly-brace-presence': 'off',
         'react/react-in-jsx-scope': 'off',
+        'react/require-default-props': 'off',
         'react/jsx-props-no-spreading': 'warn',
+        indent: [2, 4],
+        'react/jsx-filename-extension': [2, { extensions: ['.js', '.jsx', '.tsx'] }],
         'react/function-component-definition': 'off',
         'react/button-has-type': 'off',
 
-        'no-shadow': 'off',
+        'import/no-unresolved': 'off',
+        'import/prefer-default-export': 'off',
+        'import/no-extraneous-dependencies': 'off',
+        'import/extensions': 'off',
+        'max-len': ['error', { code: 100, ignoreComments: true }],
+
         'no-unused-vars': 'warn',
+        'no-shadow': 'off',
         'no-underscore-dangle': 'off',
         'no-return-await': 'off',
-        'arrow-body-style': 'off',
-        'default-param-last': 'off',
 
-        'i18next/no-literal-string': ['error', { markupOnly: true, ignoreAttribute: ['stroke'] }],
-
+        'i18next/no-literal-string': ['error', { markupOnly: true, onlyAttribute: [''] }]
     },
     globals: {
         __IS_DEV__: true
