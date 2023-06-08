@@ -11,8 +11,11 @@ const Sidebar = ({ className }: SidebarProps) => {
     const [collapsed, setCollapsed] = useState(true)
     const { t } = useTranslation()
     return (
-        <div className={classNames(cls.Sidebar, { [cls.Collapsed]: collapsed }, [className])}>
+        <div
+            data-testid='sidebar'
+            className={classNames(cls.Sidebar, { [cls.Collapsed]: !collapsed }, [className])}>
             <button
+                data-testid='sidebar-toggle'
                 className={cls.Button}
                 onClick={() => {
                     setCollapsed(!collapsed)
